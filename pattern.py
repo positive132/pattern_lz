@@ -8,7 +8,7 @@ class Singleton:
             cls._instance = super().__new__(cls)
             cls._instance.data = "Старт"
         return cls._instance
-
+#--------------------------------
 class Device(ABC):
     @abstractmethod
     def turn_on(self):
@@ -28,7 +28,7 @@ class Remote:
 
     def press_button(self):
         return self.device.turn_on()
-
+#--------------------------------------
 class Visitor(ABC):
     @abstractmethod
     def visit_book(self, book):
